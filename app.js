@@ -64,11 +64,11 @@ let count = 0;
                     
                      myPieChart.update(); 
 
-                     data1.labels.push(textvalue);
-                     data1.datasets[0].data.push(parsedexp);
-                     data1.datasets[0].backgroundColor.push(randomColor);
-                     
-                     mypichart.update();
+                    //  data1.labels.push(textvalue);
+                    //  data1.datasets[0].data.push(parsedexp);
+                    //  data1.datasets[0].backgroundColor.push(randomColor);
+
+                    //  mypichart.update();
                
 
                     }
@@ -133,32 +133,32 @@ let count = 0;
     };
 
 
-    var data1 = {
-        labels:[],
-        datasets:[{
-            data:[],
-            backgroundColor:[],
-        }]
-    }
-    var ctx1 =document.getElementById('mypichart').getContext('2d');
+    // var data1 = {
+    //     labels:[],
+    //     datasets:[{
+    //         data:[],
+    //         backgroundColor:[],
+    //     }]
+    // }
+    // var ctx1 =document.getElementById('mypichart').getContext('2d');
     var ctx = document.getElementById('myPieChart').getContext('2d');
-    var mypichart = new Chart(ctx1,{
-        type: 'pie',
-        data:data1,
-        Option: {
-            responsive :true,
-            maintainAspectRatio:false,
-            title:{
-                display:true,
-                text: 'Expense chart',
-                font: {
-                    size: 16,
+    // var mypichart = new Chart(ctx1,{
+    //     type: 'pie',
+    //     data:data1,
+    //     Option: {
+    //         responsive :true,
+    //         maintainAspectRatio:false,
+    //         title:{
+    //             display:true,
+    //             text: 'Expense chart',
+    //             font: {
+    //                 size: 16,
                     
-                }
+    //             }
 
-            }
-        }
-    })
+    //         }
+    //     }
+    // })
 
     var myPieChart = new Chart(ctx, {
         type: 'pie',

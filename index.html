@@ -10,51 +10,69 @@
    <title>Document</title>
 </head>
 <body>
-    <div class="container border border-white m-5 rounded ">
-        <h1 class="m-5 border border-success radius-4 rounded d-flex justify-content-center">
+    <div class="container border border-white m-sm-5 rounded ">
+        <h1 class="m-sm-5 m-2 mt-5 border border-success radius-4 rounded d-flex justify-content-center">
             BUDJET APP
         </h1>
-        
-        <div class="row  border border-success m-5 rounded d-flex justify-content-around p-3 ">
+        <!-- desktop view -->
+         <div class="row d-none d-sm-block  border border-success m-2 m-sm-5 rounded d-flex justify-content-around p-3 ">
             <div class="row d-flex justify-content-around  m-1 ">
                 <h2 class="p-1 col-3 d-flex justify-content-center" >BALENCE</h2>
             <h2 class="p-1 col-3  d-flex justify-content-center" >INCOME</h2>
             <h2 class="p-1 col-3  d-flex justify-content-center">EXPENCE</h2>
                
             </div>
-            <h2 class="p-1 col-3 border  radius-4 rounded d-flex justify-content-center" id="balence">0</h2>
+            <div class="row  d-flex justify-content-around  m-1">
+                <h2 class="p-1 col-3 border  radius-4 rounded d-flex justify-content-center" id="balence">0</h2>
             <h2 class="p-1 col-3 border  radius-4 rounded d-flex justify-content-center" id="inc">0</h2>
             <h2 class="p-1 col-3 border  radius-4 rounded d-flex justify-content-center" id="expc">0</h2>
-                
+              
+            </div>  
+        </div> 
+           <!-- mobile view -->
+        <div class="row d-block d-md-none  border border-success m-2 m-sm-5 rounded d-flex justify-content-around p-3 ">
+            <div class="row d-flex justify-content-around  m-1 ">
+                <h2 class="p-1 col-3 d-flex justify-content-center" >BALENCE</h2>
+               
+            
+            <h2 class="p-1 col-12 border  radius-4 rounded d-flex justify-content-center" id="balence">0</h2>
+            <h2 class="p-1 col-3  d-flex justify-content-center" >INCOME</h2>
+
+            
+            <h2 class="p-1 col-12 border  radius-4 rounded d-flex justify-content-center" id="inc">0</h2>
+            <h2 class="p-1 col-3  d-flex justify-content-center">EXPENCE</h2>
+
+            <h2 class="p-1 col-12 border  radius-4 rounded d-flex justify-content-center" id="expc">0</h2>
+            </div> 
         </div>
        
-        <div class="row  border border-success m-5 rounded d-flex justify-content-around p-4">
+        <div class="row  border border-success m-2 m-md-5 rounded d-flex justify-content-around p-4">
             <div class="row">
                 <h6 class="col-2 text-danger"></h6>
                 <h6 class="col-5 text-danger"></h6>
                 <h6 class="col-3 text-danger"></h6>
             </div>
-            <div class="col-2 border radius-4 rounded p-0 d-flex justify-content-center">
+            <div class="col-md-2 col-12 m-3  m-md-0 border radius-4 rounded p-md-0 p-2 d-flex justify-content-center">
           <label for=""></label>
-          <select name="" id="select-cat" aria-placeholder="select" class="text-black col-12">
+          <select name="" id="select-cat" aria-placeholder="select" class="text-black col-12 p-2 ">
             <option value="income" id="" class="text-black">income</option>
             <option value="expenss" id="" class="text-black">expenss</option>
 
           </select>
             </div>
-            <div class="col-5 border  radius-4 rounded p-0">
-                <input type="text" class="col-11 rounded border-0 p-2 m-1 ms-3 text-black" placeholder="Enter description" id="details">
+            <div class="col-md-5 col-12  border p-2   radius-4 rounded p-0">
+                <input type="text" class="col-12 rounded border-0 p-2   m-md-0 m-0  text-black" placeholder="Enter description" id="details">
             </div>
-            <div class="col-3 border  radius-4 rounded p-0">
-                <input type="number" class="col-11 rounded border-0 p-2 m-1 ms-3 text-black" placeholder="Enter amount" id="amt">
+            <div class="col-6 col-md-3 border  radius-4 rounded p-0 mt-3 mt-md-0 p-2">
+                <input type="number" class="col-12  col-md-12 rounded border-0 p-2 m-1 m-md-0 m-0   text-black" placeholder="Enter amount" id="amt">
             </div>
 
-            <button  class="col-2 border  radius-4 rounded p-2 text-black" onclick="add()">
+            <button  class="col-6 col-md-2 border  radius-4 rounded  text-black mt-3 mt-md-0 ms-0" onclick="add()">
                 SUBMIT
             </button>
         </div>
     </div>
-    <div class="container border border-white m-5 rounded r">
+    <div class="container border border-white m-md-5 m-0 rounded r d-none d-md-block">
         <div class="row d-flex justify-content-cente m-5 ">
             <h2 class="col-1"></h2>
             <h2 class="col-2 text-center"> Transaction</h2>
@@ -74,17 +92,6 @@
                     </tr>
                 </thead>
                 <tbody id="valueTableBody" class="row fs-4 cell">
-                    <tr>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-                            
-                        </td>
-                    </tr>
                     
                 </tbody>
     
@@ -93,6 +100,37 @@
         </div>
         <div class="row">
             <canvas id="myPieChart" class="col-6 p-2"></canvas>
+
+        </div>
+        
+    </div>
+    <!-- mobile -->
+    <div class="container border border-white m-md-5 m-0 rounded r d-block d-md-none">
+        <div class="row d-flex justify-content-cente m-5 ">
+            <h2 class="col-12 text-center"> Transaction</h2>
+            <h4 class="text-white col-12" id="trio"></h4>
+
+            <h2 class="col-12 text-center"> Amount</h2>
+            <h4 class="text-white col-12" id="tramount"></h4>
+
+            <h2 class="col-12 text-center"> Transaction Details</h2>
+           <h4 class="text-white col-12" id="trdet"></h4>
+           <div class="row">
+            <table id="valueTable  ">
+                <thead class="row ">
+                    <tr class="text-center col-12">
+                        <th class="text-center col-1 m-5 fs-1 text-danger">All values</th>
+                    </tr>
+                </thead>
+                <tbody id="valueTableBody" class="row fs-4 cell">
+                    
+                </tbody>
+    
+            </table>
+           </div>
+        </div>
+        <div class="row">
+            <canvas id="myPieChart" class="col-9 p-2"></canvas>
 
         </div>
         

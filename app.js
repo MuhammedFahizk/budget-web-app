@@ -131,11 +131,7 @@ let count = 0;
         cell3.style.textAlign = 'center';  
         cell.style.textAlign = 'center'; 
         
-        newRow.classList.add("display-grid")
-        // cell1.style.padding = '80px';
-        // cell2.style.padding = '80px';
-        // cell3.style.padding = '80px';
-        // cell.style.padding = '80px';        
+        newRow.classList.add("display-grid");
     }
     var data = {
         labels: [],
@@ -174,7 +170,7 @@ let count = 0;
     // })
 
     var myPieChart = new Chart(ctx, {
-        type: 'pie',
+        type:'doughnut',
         data: data,
         options: {
             responsive: true,

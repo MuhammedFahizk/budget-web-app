@@ -73,7 +73,7 @@
         </div>
     </div>
     <div class="container border border-white m-md-5 m-0 rounded r ">
-        <div class="row d-flex justify-content-center m-5 ">
+        <div class="row d-flex justify-content-center m-5 d-none ">
             
 
           <div class="row col-md-4 col-12">
@@ -96,13 +96,40 @@
          
            <div class="row">
             
-            <table id="valueTable  " class="text-center">
-                <thead class="row ">
-                    <tr class="text-center col-12">
-                        <th class="text-center col-1 m-5 fs-1 text-danger">All values</th>
+            <table id="valueTable " class=" ">
+                <thead class="row col-12 ">
+                    <tr class="text-center ">
+                        <!-- <th class="text-center col-1 m-5 fs-1 text-danger">All values</th> -->
                     </tr>
+             
                 </thead>
-                <tbody id="valueTableBody" class="row fs-4 cell text-center p-5 m-5 mt-0 d-flex justify-content-around ">
+                <div class="row">
+                    <h1 class="text-center col-12 m-5 fs-1 text-danger">
+                        All Values
+                    </h1>
+                </div>
+                <div class="row col-md-12 col-4 m-5 mb-1 p-5 pb-0">
+                    <div class=" row col-12 col-md-1">
+                        <h2>
+                            No
+                        </h2>
+                    </div>
+                    <div class="row col-md-4 col-12">
+                        <h2 class="col-12 text-center"> Transaction Details</h2>
+            
+                    
+                    </div>
+                       <div class="row col-md-4 col-12 me">
+                        <h2 class="col-12  text-center"> Amount</h2>
+            
+                       </div>
+                     
+                    <div class="row col-12 col-md-4">
+                        <h2 class="col-12  text-center"> Transaction</h2>
+            
+                      </div>
+                <tbody id="valueTableBody" class="row  col-md-12 col-4  fs-4  mx-5 mb-1 p-5 pb-0 ">
+                    
                     
                 </tbody>
     
@@ -110,7 +137,7 @@
            </div>
         </div>
         <div class="row">
-            <canvas id="myPieChart" class="col-6 p-2 text-danger"></canvas>
+            <canvas id="myPieChart" class="col-6 p-2 text-danger mt-5"></canvas>
 
 
         </div>

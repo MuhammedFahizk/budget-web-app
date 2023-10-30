@@ -113,16 +113,29 @@ let count = 0;
         inputammtarray.push(inputamt);
         
         var valueTableBody = document.getElementById("valueTableBody");
-        var newRow = valueTableBody.insertRow();
-        var cell = newRow.insertCell(0);
-        cell.innerHTML =+count; " . transation name:" +userValue;
-        var newRow = valueTableBody.insertRow();
-        var cell = newRow.insertCell(0);
-        cell.innerHTML ="Amount:"+ inputamt;
-        var newRow = valueTableBody.insertRow();
-        var cell = newRow.insertCell(0);
-        cell.innerHTML ="transaction    :"+ a;
 
+        var newRow = valueTableBody.insertRow();
+        var cell = newRow.insertCell(0);
+        cell.innerHTML = +count;
+        var cell1 = newRow.insertCell(1);
+        cell1.innerHTML =  userValue;
+        var cell2 = newRow.insertCell(2);
+        cell2.innerHTML = inputamt;
+        var cell3 = newRow.insertCell(3);
+        cell3.innerHTML = a;
+
+
+
+        cell1.style.textAlign = 'center'; 
+        cell2.style.textAlign = 'center';   
+        cell3.style.textAlign = 'center';  
+        cell.style.textAlign = 'center'; 
+        
+        newRow.classList.add("display-grid")
+        // cell1.style.padding = '80px';
+        // cell2.style.padding = '80px';
+        // cell3.style.padding = '80px';
+        // cell.style.padding = '80px';        
     }
     var data = {
         labels: [],
